@@ -1,125 +1,166 @@
-
-.navbar {
-  background-color: #500ae6;
-  height: 10vh;
-  color: hsl(0, 2%, 9%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-}
-.navigators {
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-.navigator-btn {
-  border: none;
-  margin: 0% 4%;
-  height: 50%;
-  padding: 0% 2%;
-  border-radius: 2px;
+/* Global styles for responsiveness */
+* {
+  box-sizing: border-box;
 }
 
-/* Person css */
-
-.AddNewPerson {
-  width: 92%;
-  height: 75vh;
-  border: 1px solid black;
-  position: relative;
-}
-.page-title {
-  border-right: 1px solid grey;
-  border-bottom: 1px solid grey;
-  height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 20%;
-  font-weight: bolder;
-  margin-bottom: 2rem;
-}
-table {
-  width: 94%;
-  margin: 0% 3%;
-}
-tr {
-  height: 35px;
-}
-thead {
-  background-color: #0ce43b;
-  color: black;
-}
-td {
-  text-align: center;
-}
-.Add-btn {
-  position: absolute;
-  bottom: 1%;
-  right: 1%;
-  width: 10%;
-  background-color: #ed10e5;
-  color: white;
-  border: none;
-  border-radius: 2px;
-  height: 8%;
-}
-.row-btns {
-  border: none;
-  background-color: white;
-  color: rgb(5, 223, 125);
-  text-decoration: underline;
-}
-form {
-  display: flex;
-  justify-content: space-between;
-  width: 94%;
-  margin: 0% 3%;
-}
-.form-container {
-  border: 1px solid black;
-  background-color: #08d890;
-  color: black;
-  width: 94%;
-  margin: 0% 3%;
-  height: 3rem;
-  margin-top: 5px;
-}
-form > input {
-  width: 100%;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-/* Retrieve css */
+@media (max-width: 1200px) {
+  .navbar {
+    height: 8vh;
+  }
+  .navigators {
+    height: 8vh;
+  }
+  .navigator-btn {
+    margin: 0 2%;
+    padding: 0 1%;
+  }
+  .AddNewPerson, .Retrieve {
+    width: 95%;
+    height: 70vh;
+  }
+  .page-title {
+    width: 25%;
+    font-size: 1.2rem;
+  }
+  table {
+    width: 90%;
+  }
+  .Add-btn {
+    width: 12%;
+  }
+  .form-container {
+    width: 92%;
+  }
+  .find-form {
+    flex-direction: column;
+  }
+  .search-aadhar {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
 
-.Retrieve {
-  border: 1px solid black;
-  width: 92%;
-  height: 75vh;
+@media (max-width: 768px) {
+  .navbar {
+    height: 7vh;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+  .navigators {
+    height: 7vh;
+  }
+  .navigator-btn {
+    margin: 0 2%;
+    padding: 0 1%;
+    font-size: 0.9rem;
+  }
+  .AddNewPerson, .Retrieve {
+    width: 100%;
+    height: 60vh;
+  }
+  .page-title {
+    width: 30%;
+    font-size: 1.1rem;
+  }
+  table {
+    width: 85%;
+  }
+  .Add-btn {
+    width: 15%;
+    font-size: 0.9rem;
+  }
+  .form-container {
+    width: 95%;
+    font-size: 0.9rem;
+  }
+  .find-form {
+    flex-direction: column;
+  }
+  .find-btn {
+    width: 30%;
+  }
 }
-.find {
-  height: 8%;
-  width: 50%;
+
+@media (max-width: 480px) {
+  .navbar {
+    height: 6vh;
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+  .navigators {
+    height: 6vh;
+  }
+  .navigator-btn {
+    margin: 0 1%;
+    padding: 0 1%;
+    font-size: 0.8rem;
+  }
+  .AddNewPerson, .Retrieve {
+    width: 100%;
+    height: 50vh;
+  }
+  .page-title {
+    width: 35%;
+    font-size: 1rem;
+  }
+  table {
+    width: 80%;
+  }
+  .Add-btn {
+    width: 20%;
+    font-size: 0.8rem;
+  }
+  .form-container {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .find-btn {
+    width: 40%;
+  }
+  .find-form {
+    flex-direction: column;
+  }
 }
-.find-form {
-  height: 100%;
-  display: flex;
-}
-.search-aadhar {
-  text-align: center;
-  margin-right: 2%;
-}
-.search-aadhar:focus {
-  outline: none;
-}
-.find-btn {
-  border: none;
-  background-color: rgb(1, 1, 1);
-  color: white;
-  width: 20%;
-}
-.result {
-  margin: 2% 3% 0% 3%;
-  width: 92%;
+
+@media (max-width: 320px) {
+  .navbar {
+    height: 5vh;
+    justify-content: center;
+    padding-left: 5px;
+  }
+  .navigators {
+    height: 5vh;
+  }
+  .navigator-btn {
+    margin: 0 1%;
+    padding: 0 1%;
+    font-size: 0.7rem;
+  }
+  .AddNewPerson, .Retrieve {
+    width: 100%;
+    height: 40vh;
+  }
+  .page-title {
+    width: 40%;
+    font-size: 0.9rem;
+  }
+  table {
+    width: 70%;
+  }
+  .Add-btn {
+    width: 25%;
+    font-size: 0.7rem;
+  }
+  .form-container {
+    width: 100%;
+    font-size: 0.7rem;
+  }
+  .find-btn {
+    width: 50%;
+  }
 }
