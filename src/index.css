@@ -1,166 +1,68 @@
-/* Global styles for responsiveness */
-* {
-  box-sizing: border-box;
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
 }
 
 body {
   margin: 0;
-  padding: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-@media (max-width: 1200px) {
-  .navbar {
-    height: 8vh;
-  }
-  .navigators {
-    height: 8vh;
-  }
-  .navigator-btn {
-    margin: 0 2%;
-    padding: 0 1%;
-  }
-  .AddNewPerson, .Retrieve {
-    width: 95%;
-    height: 70vh;
-  }
-  .page-title {
-    width: 25%;
-    font-size: 1.2rem;
-  }
-  table {
-    width: 90%;
-  }
-  .Add-btn {
-    width: 12%;
-  }
-  .form-container {
-    width: 92%;
-  }
-  .find-form {
-    flex-direction: column;
-  }
-  .search-aadhar {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    height: 7vh;
-    justify-content: flex-start;
-    padding-left: 10px;
-  }
-  .navigators {
-    height: 7vh;
-  }
-  .navigator-btn {
-    margin: 0 2%;
-    padding: 0 1%;
-    font-size: 0.9rem;
-  }
-  .AddNewPerson, .Retrieve {
-    width: 100%;
-    height: 60vh;
-  }
-  .page-title {
-    width: 30%;
-    font-size: 1.1rem;
-  }
-  table {
-    width: 85%;
-  }
-  .Add-btn {
-    width: 15%;
-    font-size: 0.9rem;
-  }
-  .form-container {
-    width: 95%;
-    font-size: 0.9rem;
-  }
-  .find-form {
-    flex-direction: column;
-  }
-  .find-btn {
-    width: 30%;
-  }
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (max-width: 480px) {
-  .navbar {
-    height: 6vh;
-    justify-content: flex-start;
-    padding-left: 10px;
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
   }
-  .navigators {
-    height: 6vh;
+  a:hover {
+    color: #747bff;
   }
-  .navigator-btn {
-    margin: 0 1%;
-    padding: 0 1%;
-    font-size: 0.8rem;
-  }
-  .AddNewPerson, .Retrieve {
-    width: 100%;
-    height: 50vh;
-  }
-  .page-title {
-    width: 35%;
-    font-size: 1rem;
-  }
-  table {
-    width: 80%;
-  }
-  .Add-btn {
-    width: 20%;
-    font-size: 0.8rem;
-  }
-  .form-container {
-    width: 100%;
-    font-size: 0.8rem;
-  }
-  .find-btn {
-    width: 40%;
-  }
-  .find-form {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 320px) {
-  .navbar {
-    height: 5vh;
-    justify-content: center;
-    padding-left: 5px;
-  }
-  .navigators {
-    height: 5vh;
-  }
-  .navigator-btn {
-    margin: 0 1%;
-    padding: 0 1%;
-    font-size: 0.7rem;
-  }
-  .AddNewPerson, .Retrieve {
-    width: 100%;
-    height: 40vh;
-  }
-  .page-title {
-    width: 40%;
-    font-size: 0.9rem;
-  }
-  table {
-    width: 70%;
-  }
-  .Add-btn {
-    width: 25%;
-    font-size: 0.7rem;
-  }
-  .form-container {
-    width: 100%;
-    font-size: 0.7rem;
-  }
-  .find-btn {
-    width: 50%;
+  button {
+    background-color: #f9f9f9;
   }
 }
